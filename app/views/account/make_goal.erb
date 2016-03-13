@@ -1,6 +1,13 @@
 <h1>Enter Your Goal</h1>
 
-<form action='/account/submit_embarrassment'>
-  <input type='textarea'></input>
+<form action='/account/make_goal' method='post'>
+  <input type='textarea' placeholder='Current Weight!!!' name='challenge[current_weight]'></input>
+  <input type='textarea' placeholder='Goal Weight!!!' name='challenge[goal_weight]'></input>
+  <select name='challenge[challenge_duration]'>
+    <option value="">Challenge Duration</option>
+    <option value="2_weeks">2 Weeks</option>
+    <option value="3_weeks">3 Weeks</option>
+    <option value="4_weeks">4 Weeks</option>
+  </select>
   <input type='submit'></input>
 </form>
