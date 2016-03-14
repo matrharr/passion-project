@@ -4,17 +4,14 @@
 
 <a href="/logout" method='get'>LogOut</a><br>
 
-<a href='/users/embarrassment'>Your Embarrassment</a><br>
+<button type='button' class='btn btn-primary'>Notifications <span class="badge">5</span></button><br>
 
-<a href="/users/progress">Your Progress</a><br>
-
-<a href="/users/challenge">Your Challenge</a><br>
-
-<a href="/users/accountability_group">Your Accountability Group</a><br>
-
-<a href="/users/mentor">Your respected contact</a><br>
-
-<a href="/users/<%= session[:user_id] %>">View Profile</a><br>
-
-
+<ul class="breadcrumb">
+  <li><a href='/users/embarrassment'>Your Embarrassment</a></li>
+  <li class="active"><a href="/users/progress">Your Progress</a></li>
+  <li><a href="/users/challenge">Your Challenge</a></li>
+  <li><a href="/users/accountability_group">Your Accountability Group</a></li>
+  <li><a href="/users/mentor">Your respected contact</a></li>
+  <li><a href="/users/<%= session[:user_id] %>">View Profile</a></li>
+</ul>
 
