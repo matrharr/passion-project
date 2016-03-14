@@ -1,12 +1,19 @@
 <h1>Sign Up and Be Motivated</h1>
 
+<div class="row">
 <form action="/account" method='post'>
-  <input type='textarea' placeholder='First Name' name='user[first_name]'></input>
+  <div class="col-sm-6">
+    <input type='textarea' placeholder='First Name' name='user[first_name]'></input>
   <input type='textarea' placeholder="Last Name" name='user[last_name]'></input>
-  <input type='textarea' placeholder="Email" name='user[email]'></input>
+</div>
+  <div class="col-sm-6">
+    <input type='textarea' placeholder="Email" name='user[email]'></input>
   <input type='textarea' placeholder="Password" name='user[password]'></input>
+</div>
   <input type='textarea' placeholder="Location" name='user[location]'></input>
 
   <input type='submit' value='Create Account!' class='button'></input>
 </form>
+</div>
+
 

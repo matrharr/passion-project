@@ -1,6 +1,6 @@
 <h1>Enter Your Goal</h1>
 
-<form action='/account/make_goal' method='post'>
+<form class action='/account/make_goal' method='post'>
   <input type='textarea' placeholder='Current Weight!!!' name='challenge[current_weight]'></input>
   <input type='textarea' placeholder='Goal Weight!!!' name='challenge[goal_weight]'></input>
   <select name='challenge[challenge_duration]'>
@@ -11,3 +11,13 @@
   </select>
   <input type='submit'></input>
 </form>
+
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Challenge Duration
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">2 Weeks</a></li>
+    <li><a href="#">3 Weeks</a></li>
+    <li><a href="#">4 Weeks</a></li>
+  </ul>
+</div>

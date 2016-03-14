@@ -3,3 +3,30 @@
 <% @progress.attributes.each do |key, value| %>
   <p><%= key %> : <%= value %><br></p>
 <% end %>
+
+<div class="progress">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+  aria-valuemin="0" aria-valuemax="100" style="width:40%">
+    Week 1 Goal
+  </div>
+</div>
+
+<ul class="list-group">
+  <li class="list-group-item list-group-item-success">1 Mile Hike</li>
+  <li class="list-group-item list-group-item-warning">20 Pushups</li>
+  <li class="list-group-item list-group-item-warning">15 Minute Jog</li>
+  <li class="list-group-item list-group-item-warning">10 Squats</li>
+</ul>
+
+<div class="progress">
+  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+  aria-valuemin="0" aria-valuemax="100" style="width:60%">
+    Your Ultimate Goal
+  </div>
+</div>
+
+
+<div class="alert alert-warning">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Warning!</strong> If you don't meet this week's goal, your embarrassment will be posted to Facebook!
+</div>
