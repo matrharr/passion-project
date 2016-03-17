@@ -3,17 +3,13 @@ get '/' do
 end
 
 post '/home' do
-  user = User.find_by(email: params[:email])
-    if user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect '/home'
+  @user = User.find_by(email: params[:email])
+    if @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+      redirect "/users/#{@user.id}"
     else
       erb :index
     end
-end
-
-get '/home' do
-  erb :home
 end
 
 get '/logout' do

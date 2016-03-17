@@ -1,23 +1,21 @@
+<div id='goal'>
+
 <h1>Enter Your Goal</h1>
 
-<form class action='/account/make_goal' method='post'>
-  <input type='textarea' placeholder='Current Weight!!!' name='challenge[current_weight]'></input>
-  <input type='textarea' placeholder='Goal Weight!!!' name='challenge[goal_weight]'></input>
-  <select name='challenge[challenge_duration]'>
+<form id='goal_form' action='/account/make_goal' method='post'>
+  <input type='textarea' placeholder='Goal Exercise Distance!!!' name='goal_distance'></input>
+  <select name='challenge_duration'>
     <option value="">Challenge Duration</option>
     <option value="2_weeks">2 Weeks</option>
     <option value="3_weeks">3 Weeks</option>
     <option value="4_weeks">4 Weeks</option>
   </select>
-  <input type='submit'></input>
+  <h1>Submit An Embarrassment</h1>
+<p>Please submit an embarrassing story or statement about yourself. Make sure that it is something that you DO NOT want your friends to know about! </p>
+  <textarea rows='4' cols='50' placeholder='Enter Your Embarrasment Here!!!' name='embarrassment'></textarea>
+  <input type='submit' value="Create Challenge!"></input>
 </form>
 
-<div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Challenge Duration
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="#">2 Weeks</a></li>
-    <li><a href="#">3 Weeks</a></li>
-    <li><a href="#">4 Weeks</a></li>
-  </ul>
+<button type='button' class='btn-danger'>WE WILL POST YOUR EMBARASSMENT TO YOUR SOCIAL MEDIA ACCOUNT IF YOU DO NOT MEET YOUR GOAL!</button>
+
 </div>

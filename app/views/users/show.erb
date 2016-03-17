@@ -1,0 +1,21 @@
+<h1><%= @user.first_name %>'s Profile</h1>
+<h2>DO THE THING!!!</h2>
+<img src="#"><br>
+
+
+
+<% if session[:user_id].nil? %>
+<ul class="breadcrumb">
+  <li class="active"><a href="/users/progress"><%= @user.first_name %>'s Progress</a></li>
+  <li><a href="/users/challenge"><%= @user.first_name %>'s Challenge</a></li>
+  <li><a href="/users/challenge"></a></li>
+<% else %>
+  <ul class="breadcrumb">
+  <li><a href='/users/embarrassment'>Your Embarrassment</a></li>
+  <li class="active"><a href="/users/progress">Your Progress</a></li>
+  <li><a href="/users/challenge">Your Challenge</a></li>
+  <li><a href="/users/accountability_group">Your Accountability Group</a></li>
+  <li><a href="/logout" method='get'>LogOut</a></li>
+</ul>
+
+<% end %>
