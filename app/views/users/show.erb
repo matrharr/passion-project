@@ -1,24 +1,31 @@
+<center>
+
 <h1><%= @user.first_name %>'s Profile</h1>
-<h2>DO THE THING!!!</h2>
-<img src="#"><br>
 
+<img src="http://zblogged.com/wp-content/uploads/2015/11/17.jpg"><br>
+</center>
 
-
+<hr>
 <% if session[:user_id].nil? %>
+
 <div class='container-fluid' align='center'>
+
 <ul class="breadcrumb">
   <li class="active"><a href="/users/<%=@user.id%>/progress"><%= @user.first_name %>'s Progress</a></li>
   <li><a href="/users/<%=@user.id%>/challenge"><%= @user.first_name %>'s Challenge</a></li>
 </ul>
+
 </div>
 <% else %>
 <div class='container-fluid' align='center'>
+<span style='font-size: 2em'>
 <ul class="breadcrumb">
   <li><a href='/users/<%=@user.id%>/embarrassment'>Your Embarrassment</a></li>
   <li class="active"><a href="/users/<%=session[:user_id]%>/progress">Your Progress</a></li>
-  <li><a href="/users/<%=session[:user_id]%>/challenge">Your Challenge</a></li>
   <li><a href="/users/<%=session[:user_id]%>/accountability_group">Your Accountability Group</a></li>
-  <li><a href="/logout" method='get'>LogOut</a></li>
 </ul>
+</span>
 </div>
+
+<center><h2><span style='color:red'>5 Days Remaining...</span></h2></center>
 <% end %>

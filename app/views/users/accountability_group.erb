@@ -1,17 +1,20 @@
+<center>
+
 <h1>ACCOUNTABILITY GROUP</h1>
 
 
  <div class="container">
   <h2>Hover Rows</h2>
 
-  <table class="table table-hover">
+  <table class="table">
     <tbody>
     <%@group.each do |member|%>
     <tr>
-    <a href='/users/<%=member.id%>'><th><%=member.first_name%> <%=member.last_name%></th></a>
+   <th><a href='/users/<%=member.id%>'><%=member.first_name%> <%=member.last_name%></a></th>
     <% end %>
       </tr>
     </tbody>
   </table>
 </div>
+</center>
 
