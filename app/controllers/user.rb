@@ -14,7 +14,11 @@ get '/users/:id/challenge' do
 end
 
 get '/users/:id/accountability_group' do
-  @user = User.find(params[:user_id])
+  p params
+  p '$$$$$$$$$$$$$$$$'
+  @user = User.find(params[:id])
+  p @user
+  p '%%%%%%%%%%%%%%%%'
   @group = User.where(accountability_group_id: @user.accountability_group_id)
   p @group
   erb :'users/accountability_group'

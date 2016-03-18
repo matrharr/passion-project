@@ -2,7 +2,7 @@ get '/' do
   erb :index
 end
 
-post '/home' do
+post '/users' do
   @user = User.find_by(email: params[:email])
     if @user.authenticate(params[:password])
       session[:user_id] = @user.id
