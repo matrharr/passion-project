@@ -1,37 +1,38 @@
 <center>
-<h1>CHALLENGE PROGRESS</h1>
+<h1 style='color:orange'>CHALLENGE PROGRESS</h1>
 
-<% @progress.attributes.each do |key, value| %>
-  <p><%= key %> : <%= value %><br></p>
-<% end %>
+
+<h4>Goal Distance: <%= @progress.goal_distance %></h4>
+<h4>Challenge Duration: <%= @progress.challenge_duration %> Weeks</h4>
+
 
 
 <div style='width:75%'>
 <div class="progress">
   <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
   aria-valuemin="0" aria-valuemax="100" style="width:40%">
-    Week 1 Goal
+    This Week's Goal: 10 Miles
   </div>
 </div>
 
 <ul class="list-group">
   <li class="list-group-item list-group-item-success">Mon/Wed/Fri: 1 mile walk</li>
   <li class="list-group-item list-group-item-warning">Thurs/Fri: 2 mile jog</li>
-  <li class="list-group-item list-group-item-warning">Weekend: 20 minute jog</li>
+  <li class="list-group-item list-group-item-warning">Weekend: 20 minute intervals</li>
 
 </ul>
 
 <div class="progress">
   <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
   aria-valuemin="0" aria-valuemax="100" style="width:60%">
-    Your Ultimate Goal
+    Total Miles Logged: 37.3
   </div>
 </div>
 
 
 <div class="alert alert-warning">
   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-  <strong>Warning!</strong> If you do not meet your goal in 5 days, your embarrassment will be posted to Facebook!
+  <strong>Warning!</strong> If you do not meet your goal in <strong>5 DAYS</strong>, your embarrassment will be posted to Facebook!
 </div>
 </div>
 </center>
