@@ -1,7 +1,9 @@
-<h1>Sign Up and Be Motivated</h1>
+<div id='sign_up'>
+
+<h1>Sign Up and Do the Thing</h1>
 
 <div class="row">
-<form action="/account" method='post'>
+<form id='create_account'action="/account" method='post'>
   <div class="col-sm-6">
     <input type='textarea' placeholder='First Name' name='user[first_name]'></input>
   <input type='textarea' placeholder="Last Name" name='user[last_name]'></input>
@@ -16,4 +18,6 @@
 </form>
 </div>
 
-
+</div>
+<%= erb :'account/make_goal', layout: false %>
+<%= erb :'account/link_social', layout: false %>
