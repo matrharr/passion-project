@@ -1,19 +1,22 @@
-get '/users/embarrassment' do
-  @embarassment = User.find_by(id: session[:user_id]).challenge.embarrassment
+get '/users/:id/embarrassment' do
+  @embarassment = User.find_by(id: params[:id]).challenge.embarrassment
   erb :'/users/embarrassment'
 end
 
-get '/users/progress' do
-  @progress = Challenge.find_by(user_id: session[:user_id])
+get '/users/:id/progress' do
+  @progress = Challenge.find_by(user_id: params[:id])
   erb :'/users/progress'
 end
 
-get '/users/challenge' do
-  @challenge = Challenge.find_by(user_id: session[:user_id])
+get '/users/:id/challenge' do
+  @challenge = Challenge.find_by(user_id: params[:id])
   erb :'/users/challenge'
 end
 
-get '/users/accountability_group' do
+get '/users/:id/accountability_group' do
+  @user = User.find(params[:user_id])
+  @group = User.where(accountability_group_id: @user.accountability_group_id)
+  p @group
   erb :'users/accountability_group'
 end
 

@@ -4,13 +4,13 @@ end
 
 post '/account' do
   @user = User.create(params[:user])
-  session[:user_id] = @user.id
 end
 
 post '/account/make_goal' do
-  p params
-  @challenge = Challenge.create(goal_distance: params[:goal_distance], challenge_duration: params[:challenge_duration], embarrassment: params[:embarrassment], user_id: session[:id])
+  @user = User.last
+  @challenge = Challenge.create(goal_distance: params[:goal_distance], challenge_duration: params[:challenge_duration], embarrassment: params[:embarrassment], user_id: @user.id)
   p @challenge
+
 end
 
 # get '/account/make_goal' do

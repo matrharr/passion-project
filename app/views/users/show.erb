@@ -5,17 +5,20 @@
 
 
 <% if session[:user_id].nil? %>
+<div class='container-fluid' align='center'>
 <ul class="breadcrumb">
-  <li class="active"><a href="/users/progress"><%= @user.first_name %>'s Progress</a></li>
-  <li><a href="/users/challenge"><%= @user.first_name %>'s Challenge</a></li>
-  <li><a href="/users/challenge"></a></li>
+  <li class="active"><a href="/users/<%=@user.id%>/progress"><%= @user.first_name %>'s Progress</a></li>
+  <li><a href="/users/<%=@user.id%>/challenge"><%= @user.first_name %>'s Challenge</a></li>
+</ul>
+</div>
 <% else %>
-  <ul class="breadcrumb">
-  <li><a href='/users/embarrassment'>Your Embarrassment</a></li>
-  <li class="active"><a href="/users/progress">Your Progress</a></li>
-  <li><a href="/users/challenge">Your Challenge</a></li>
-  <li><a href="/users/accountability_group">Your Accountability Group</a></li>
+<div class='container-fluid' align='center'>
+<ul class="breadcrumb">
+  <li><a href='/users/<%=@user.id%>/embarrassment'>Your Embarrassment</a></li>
+  <li class="active"><a href="/users/<%=session[:user_id]%>/progress">Your Progress</a></li>
+  <li><a href="/users/<%=session[:user_id]%>/challenge">Your Challenge</a></li>
+  <li><a href="/users/<%=session[:user_id]%>/accountability_group">Your Accountability Group</a></li>
   <li><a href="/logout" method='get'>LogOut</a></li>
 </ul>
-
+</div>
 <% end %>
